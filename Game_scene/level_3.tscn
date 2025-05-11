@@ -47,7 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ys27ym8pf1e" path="res://assests/character/player/player-walk/13.png" id="45_1rys0"]
 [ext_resource type="Texture2D" uid="uid://dkfdh7pc1f1y3" path="res://assests/character/player/player-walk/14.png" id="46_4787l"]
 [ext_resource type="PackedScene" uid="uid://xw7eyjn4v7b7" path="res://touch_controller_scene/touch_controll.tscn" id="47_llv50"]
-[ext_resource type="Texture2D" uid="uid://l8tj2m70aotc" path="res://assests/tileset/world_tileset.png" id="48_ljg8y"]
+[ext_resource type="Texture2D" uid="uid://l8tj2m70aotc" path="res://assests/world_tileset.png" id="48_ljg8y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wqvwq"]
 animations = [{
