@@ -1,25 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://xw7eyjn4v7b7"]
+[gd_scene load_steps=7 format=3 uid="uid://xw7eyjn4v7b7"]
 
+[ext_resource type="Script" uid="uid://b27ptxwfenico" path="res://Script/touch_controll.gd" id="1_e7hs4"]
 [ext_resource type="Texture2D" uid="uid://dmfphlyhu231y" path="res://assests/Img/jump_arrow.png" id="1_peml4"]
 [ext_resource type="Texture2D" uid="uid://cmd5vasqsh65v" path="res://assests/Img/left_arrow.png" id="2_4ne23"]
 [ext_resource type="Texture2D" uid="uid://jsab5mqgw0gv" path="res://assests/Img/right_arrow.png" id="3_hk1sr"]
+[ext_resource type="Texture2D" uid="uid://cdnl73v5n5yqy" path="res://assests/Img/Interect.png" id="4_e7hs4"]
+[ext_resource type="Texture2D" uid="uid://4ievt637gl0w" path="res://assests/Img/Group 51.png" id="6_y51v5"]
 
 [node name="TouchControll" type="CanvasLayer"]
+scale = Vector2(0.9, 0.9)
+transform = Transform2D(0.9, 0, 0, 0.9, 0, 0)
+script = ExtResource("1_e7hs4")
 
 [node name="left" type="TouchScreenButton" parent="."]
-position = Vector2(266, 729)
+texture_filter = 1
+position = Vector2(90, 534.444)
 scale = Vector2(3, 3)
 texture_normal = ExtResource("2_4ne23")
 action = "left"
 
 [node name="right" type="TouchScreenButton" parent="."]
-position = Vector2(439, 729)
+texture_filter = 1
+position = Vector2(325.556, 534.444)
 scale = Vector2(3, 3)
 texture_normal = ExtResource("3_hk1sr")
 action = "right"
 
 [node name="jump" type="TouchScreenButton" parent="."]
-position = Vector2(1548, 729)
+texture_filter = 1
+position = Vector2(1010, 534.444)
 scale = Vector2(3, 3)
 texture_normal = ExtResource("1_peml4")
 action = "jump"
+
+[node name="PickUp" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(1145.56, 385.556)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("4_e7hs4")
+action = "PickUp"
+
+[node name="ExitButton" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(1142.22, 385.556)
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("6_y51v5")
+
+[connection signal="pressed" from="PickUp" to="." method="_on_pick_up_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
