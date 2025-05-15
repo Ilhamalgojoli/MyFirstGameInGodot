@@ -7,8 +7,6 @@ const JUMP_VELOCITY = -1500.0
 
 var animation_player: AnimatedSprite2D
 
-@onready var ray_cast = $RayCast2D
-
 func _ready():
 	animation_player = $AnimatedSprite2D
 	up_direction = Vector2.UP
@@ -25,7 +23,7 @@ func _physics_process(delta: float) -> void:
 
 	# Smooth jump 
 	if velocity.y > 0 || velocity.y < 0:
-		velocity.y += GRAVITY * delta * WEIGHT_PLAYER
+		velocity.y += GRAVITY * delta * WEIGHT_PLAYER 
 
 	# Movement
 	var direction = Input.get_action_strength("right") - Input.get_action_strength("left")
