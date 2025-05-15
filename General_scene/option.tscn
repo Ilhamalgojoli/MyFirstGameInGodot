@@ -27,8 +27,8 @@ script = ExtResource("1_hisky")
 
 [node name="Screenshot2025-03-131109261" type="Sprite2D" parent="."]
 modulate = Color(0.687215, 0.687215, 0.687215, 1)
-position = Vector2(960, 540)
-scale = Vector2(2.27488, 2.76923)
+position = Vector2(640, 360)
+scale = Vector2(1.51659, 1.84615)
 texture = ExtResource("2_xejwd")
 
 [node name="Option" type="Label" parent="."]
@@ -37,9 +37,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -194.0
-offset_top = 159.0
+offset_top = 70.0
 offset_right = 113.0
-offset_bottom = 257.0
+offset_bottom = 168.0
 grow_horizontal = 2
 scale = Vector2(1.24, 1.24)
 theme_override_fonts/font = ExtResource("3_mjcna")
@@ -53,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -384.0
-offset_top = -105.0
-offset_right = 4.0
-offset_bottom = 50.0
+offset_left = -253.0
+offset_top = -56.0
+offset_right = -22.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.99, 1.99)
@@ -83,10 +83,10 @@ layout_mode = 2
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 65.0
-offset_top = 44.0
-offset_right = 124.0
-offset_bottom = 102.0
+offset_left = 80.0
+offset_top = 70.0
+offset_right = 118.0
+offset_bottom = 107.0
 scale = Vector2(2, 2)
 theme_override_icons/icon = ExtResource("4_4x3ob")
 theme_override_styles/normal = SubResource("StyleBoxFlat_c6ia3")

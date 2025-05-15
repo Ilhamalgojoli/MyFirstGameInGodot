@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ej1e87hlkkuv"]
+
+[ext_resource type="Texture2D" uid="uid://cdnl73v5n5yqy" path="res://assests/Img/Interect.png" id="1_vxc36"]
+[ext_resource type="Script" uid="uid://vshpn68ihkhi" path="res://Script/touch_screen_button.gd" id="2_5oilb"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(246, 157)
+scale = Vector2(2.36364, 2.38636)
+texture_normal = ExtResource("1_vxc36")
+script = ExtResource("2_5oilb")
+
+[connection signal="pressed" from="TouchScreenButton" to="TouchScreenButton" method="_on_pressed"]

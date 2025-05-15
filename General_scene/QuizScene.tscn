@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddb2u65x2raxd"]
+
+[ext_resource type="Script" uid="uid://bjfuiwgyely5d" path="res://Script/quiz_scene.gd" id="1_jldtv"]
+[ext_resource type="Texture2D" uid="uid://0xjctedh0y7l" path="res://assests/Img/X.png" id="2_myhem"]
+
+[node name="Quiz" type="Node2D"]
+script = ExtResource("1_jldtv")
+
+[node name="Quiz" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Quiz"]
+modulate = Color(0, 0, 0, 0.258824)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.0
+offset_top = -305.0
+offset_right = 578.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="Pertanyaan" type="Label" parent="Quiz"]
+offset_left = 133.0
+offset_top = 185.0
+offset_right = 321.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 20
+text = "Contoh pertanyaan"
+
+[node name="Jawaban" type="Label" parent="Quiz"]
+offset_left = 576.0
+offset_top = 569.0
+offset_right = 659.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 20
+text = "Jawaban"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Quiz"]
+offset_left = 349.0
+offset_top = 391.0
+offset_right = 441.0
+offset_bottom = 457.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Jawaban 1" type="Button" parent="Quiz/VBoxContainer"]
+layout_mode = 2
+text = "Jawaban 1
+"
+
+[node name="Jawaban 2" type="Button" parent="Quiz/VBoxContainer"]
+layout_mode = 2
+text = "Jawaban  2"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Quiz"]
+offset_left = 735.0
+offset_top = 391.0
+offset_right = 827.0
+offset_bottom = 457.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Jawaban 3" type="Button" parent="Quiz/VBoxContainer2"]
+layout_mode = 2
+text = "Jawaban 3"
+
+[node name="ExitScene" type="Button" parent="Quiz"]
+texture_filter = 1
+offset_left = 1151.0
+offset_top = 55.0
+offset_right = 1217.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("2_myhem")
+
+[connection signal="pressed" from="Quiz/VBoxContainer/Jawaban 1" to="." method="_on_jawaban_1_pressed"]
+[connection signal="pressed" from="Quiz/VBoxContainer/Jawaban 2" to="." method="_on_jawaban_2_pressed"]
+[connection signal="pressed" from="Quiz/VBoxContainer2/Jawaban 3" to="." method="_on_jawaban_3_pressed"]
+[connection signal="pressed" from="Quiz/ExitScene" to="." method="_on_exit_scene_pressed"]

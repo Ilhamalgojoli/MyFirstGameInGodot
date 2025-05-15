@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfcls0xh0wjbe"]
+
+[ext_resource type="Texture2D" uid="uid://c7w3x3l6njddh" path="res://assests/collection/scroll/0.png" id="1_tobf6"]
+[ext_resource type="Script" uid="uid://1pdirf1ajuv1" path="res://Script/scroll.gd" id="1_wqw2m"]
+[ext_resource type="Texture2D" uid="uid://dkric2k1thyik" path="res://assests/collection/scroll/1.png" id="2_wqw2m"]
+[ext_resource type="Texture2D" uid="uid://d3306allmytvt" path="res://assests/collection/scroll/2.png" id="3_j4ddu"]
+[ext_resource type="Texture2D" uid="uid://bishi7fqib4k1" path="res://assests/collection/scroll/3.png" id="4_4p2oy"]
+[ext_resource type="Texture2D" uid="uid://bm1u05u05imfs" path="res://assests/collection/scroll/4.png" id="5_p4h1j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ww4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tobf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wqw2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j4ddu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4p2oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p4h1j")
+}],
+"loop": false,
+"name": &"Scroll",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wqw2m"]
+
+[node name="Scroll" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_wqw2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3ww4m")
+animation = &"Scroll"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(50, 50)
+shape = SubResource("CircleShape2D_wqw2m")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
