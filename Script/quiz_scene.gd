@@ -31,6 +31,7 @@ func show_question(index):
 func _on_answer_pressed(index):
 	if index == correct_index:
 		Controller.count_coin()
+		Controller.exit_show = true
 		result_label.text = "Benar! +1 Coin"
 		Controller.disappire()
 		Controller.emit_signal("interect", true, false, true)
@@ -47,5 +48,6 @@ func _on_jawaban_3_pressed() -> void:
 	_on_answer_pressed(2)
 
 func _on_exit_scene_pressed() -> void:
+	Controller.exit_show = false
 	quiz_dialog.visible = false
 	Controller.emit_signal("interect", true, false, true)

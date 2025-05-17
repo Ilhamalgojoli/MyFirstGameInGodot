@@ -30,7 +30,6 @@ func _on_pick_up_pressed() -> void:
 	if Controller.level_press > 3:
 		Controller.level_press = 1
 	Controller.show_quiz(true)
-	
 
 func _on_exit_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://General_scene/ChooseLevel.tscn")
