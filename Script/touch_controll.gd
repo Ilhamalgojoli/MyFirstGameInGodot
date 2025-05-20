@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var left = $left
 @onready var right = $right
 @onready var jump = $jump
-@onready var interect = $PickUp
+@onready var interect = $Interect
 @onready var exit_button = $ExitButton
 
 func _ready() -> void:
@@ -25,11 +25,12 @@ func _on_interect_triggered(trigger: bool, is_exit: bool, is_controller: bool) -
 		interect.visible = trigger
 		exit_button.visible = false
 
-func _on_pick_up_pressed() -> void:
+func _on_exit_button_pressed() -> void:
+	if Controller.answer_quiz:
+		get_tree().change_scene_to_file("res://General_scene/ChooseLevel.tscn")
+
+func _on_interect_pressed() -> void:
 	Controller.level_press += 1
 	if Controller.level_press > 3:
 		Controller.level_press = 1
 	Controller.show_quiz(true)
-
-func _on_exit_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://General_scene/ChooseLevel.tscn")

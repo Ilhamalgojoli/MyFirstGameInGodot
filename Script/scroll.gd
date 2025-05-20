@@ -20,5 +20,3 @@ func _on_area_2d_body_exited(body: Node) -> void:
 		animate_scroll.play("Scroll", -1.0, true)
 		Controller.emit_signal("interect", false, false, false)
 		
-func delete_scroll() -> void:
-	queue_free()

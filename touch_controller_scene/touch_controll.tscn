@@ -33,7 +33,7 @@ scale = Vector2(3, 3)
 texture_normal = ExtResource("1_peml4")
 action = "jump"
 
-[node name="PickUp" type="TouchScreenButton" parent="."]
+[node name="Interect" type="TouchScreenButton" parent="."]
 texture_filter = 1
 position = Vector2(1145.56, 385.556)
 scale = Vector2(3, 3)
@@ -46,5 +46,5 @@ position = Vector2(1142.22, 385.556)
 scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("6_y51v5")
 
-[connection signal="pressed" from="PickUp" to="." method="_on_pick_up_pressed"]
+[connection signal="pressed" from="Interect" to="." method="_on_interect_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

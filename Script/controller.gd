@@ -2,7 +2,7 @@ extends Node
 
 var coin: int = 0
 var level_press := 0
-var exit_show:= false
+var answer_quiz := false
 signal my_coin(coin: int)
 signal interect(trigger: bool, is_exit: bool, controller: bool)
 signal show_dialog(show: bool)

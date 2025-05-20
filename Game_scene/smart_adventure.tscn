@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://d0021p5jbptrv"]
+[gd_scene load_steps=61 format=4 uid="uid://d0021p5jbptrv"]
 
 [ext_resource type="Script" uid="uid://cdui6k4u2bnt0" path="res://Script/player.gd" id="1_dok0y"]
 [ext_resource type="PackedScene" uid="uid://c27miob7suqqr" path="res://General_scene/coin_display.tscn" id="2_gwoj7"]
@@ -52,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://qu1uaxp5vfu0" path="res://General_scene/coin.tscn" id="48_db5tm"]
 [ext_resource type="PackedScene" uid="uid://cb356eemxbar4" path="res://General_scene/Gate.tscn" id="51_fnmt8"]
 [ext_resource type="PackedScene" uid="uid://dfcls0xh0wjbe" path="res://General_scene/scroll.tscn" id="52_3kb1j"]
+[ext_resource type="PackedScene" uid="uid://ddb2u65x2raxd" path="res://General_scene/QuizScene.tscn" id="53_3kb1j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_et6n4"]
 animations = [{
@@ -385,14 +386,6 @@ shape = SubResource("WorldBoundaryShape2D_dkomq")
 
 [node name="Timer" type="Timer" parent="VoidZone"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TouchControll" parent="Control" instance=ExtResource("46_ai7dl")]
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(987, 729)
 scale = Vector2(5, 5)
@@ -541,6 +534,19 @@ position = Vector2(7057, -459)
 
 [node name="Scroll3" parent="Node2D" instance=ExtResource("52_3kb1j")]
 position = Vector2(14584, -1583)
+
+[node name="Scroll4" parent="Node2D" instance=ExtResource("52_3kb1j")]
+position = Vector2(835, 581)
+
+[node name="Gate2" parent="Node2D" instance=ExtResource("51_fnmt8")]
+position = Vector2(1048, 562)
+
+[node name="TouchControll" parent="." instance=ExtResource("46_ai7dl")]
+
+[node name="Quiz" parent="." instance=ExtResource("53_3kb1j")]
+
+[node name="Scroll" parent="." instance=ExtResource("52_3kb1j")]
+position = Vector2(1684, 567)
 
 [connection signal="body_entered" from="VoidZone" to="VoidZone" method="_on_body_entered"]
 [connection signal="timeout" from="VoidZone/Timer" to="VoidZone" method="_on_timer_timeout"]

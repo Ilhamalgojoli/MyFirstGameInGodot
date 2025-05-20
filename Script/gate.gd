@@ -10,14 +10,13 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		if Controller.exit_show:
-			Controller.emit_signal("interect", true, true, false)
-			if first_enter:
-				first_enter = false
-			else:
-				anim_play.play("OpenGate")
-				await anim_play.animation_finished
-				anim_play.play("Idle")
+		Controller.emit_signal("interect", true, true, false)
+		if first_enter:
+			first_enter = false
+		else:
+			anim_play.play("OpenGate")
+			await anim_play.animation_finished
+			anim_play.play("Idle")
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player":

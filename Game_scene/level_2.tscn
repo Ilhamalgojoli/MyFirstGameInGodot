@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://c564hwcuelh4"]
+[gd_scene load_steps=61 format=4 uid="uid://c564hwcuelh4"]
 
 [ext_resource type="Script" uid="uid://cdui6k4u2bnt0" path="res://Script/player.gd" id="1_udns0"]
 [ext_resource type="PackedScene" uid="uid://c27miob7suqqr" path="res://General_scene/coin_display.tscn" id="2_qjq70"]
@@ -51,6 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://qu1uaxp5vfu0" path="res://General_scene/coin.tscn" id="49_poli0"]
 [ext_resource type="PackedScene" uid="uid://dfcls0xh0wjbe" path="res://General_scene/scroll.tscn" id="50_k28n3"]
 [ext_resource type="PackedScene" uid="uid://cb356eemxbar4" path="res://General_scene/Gate.tscn" id="51_jtb0r"]
+[ext_resource type="PackedScene" uid="uid://ddb2u65x2raxd" path="res://General_scene/QuizScene.tscn" id="52_jtb0r"]
 [ext_resource type="Script" uid="uid://djne60e0hs3ux" path="res://Game_scene/void_zone.gd" id="52_k28n3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wqvwq"]
@@ -708,6 +709,8 @@ position = Vector2(4026, 4661)
 
 [node name="Scroll3" parent="Node2D" instance=ExtResource("50_k28n3")]
 position = Vector2(677, 2108)
+
+[node name="Quiz" parent="Node2D" instance=ExtResource("52_jtb0r")]
 
 [node name="VoidZone" type="Area2D" parent="."]
 position = Vector2(-1736, 5497)
