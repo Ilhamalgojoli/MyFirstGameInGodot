@@ -18,6 +18,7 @@ func _on_show_dialog(show: bool) -> void:
 		show_question(Controller.level_press - 1)
 
 func show_question(index):
+	Controller.answer_quiz = false
 	var q = Controller.questions[index]
 	question_label.text = q[0]
 	answer_a.text = q[1]
