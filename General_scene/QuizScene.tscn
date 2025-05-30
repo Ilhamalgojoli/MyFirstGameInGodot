@@ -1,11 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddb2u65x2raxd"]
+[gd_scene load_steps=9 format=3 uid="uid://ddb2u65x2raxd"]
 
 [ext_resource type="Script" uid="uid://bjfuiwgyely5d" path="res://Script/quiz_scene.gd" id="1_jldtv"]
+[ext_resource type="FontFile" uid="uid://bi7c83uaio205" path="res://assests/Font/JejuHallasan-Regular.ttf" id="3_73tjt"]
 [ext_resource type="Texture2D" uid="uid://4ievt637gl0w" path="res://assests/Img/Group 51.png" id="3_hi8jm"]
-[ext_resource type="Texture2D" uid="uid://k2i6sxyw4pb4" path="res://assests/Img/Bg.png" id="3_myhem"]
+[ext_resource type="Texture2D" uid="uid://k2i6sxyw4pb4" path="res://assests/Img/bg.png" id="3_myhem"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myhem"]
 bg_color = Color(0, 0.643137, 0.560784, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.643137, 0.560784, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -13,6 +19,11 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi8jm"]
 bg_color = Color(0, 0.643137, 0.560784, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.643137, 0.560784, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -20,6 +31,11 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73tjt"]
 bg_color = Color(2.5028e-06, 0.642659, 0.562207, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.643137, 0.560784, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -45,33 +61,39 @@ texture = ExtResource("3_myhem")
 
 [node name="Pertanyaan" type="Label" parent="Quiz"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 493.0
-offset_top = 150.0
-offset_right = 774.0
-offset_bottom = 192.0
+offset_left = 484.0
+offset_top = 155.0
+offset_right = 781.0
+offset_bottom = 197.0
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_73tjt")
+theme_override_font_sizes/font_size = 32
 text = "Contoh pertanyaan"
+autowrap_mode = 3
 
 [node name="Jawaban" type="Label" parent="Quiz"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 868.0
-offset_top = 507.0
-offset_right = 951.0
-offset_bottom = 535.0
-theme_override_font_sizes/font_size = 20
+offset_left = 845.0
+offset_top = 537.0
+offset_right = 977.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("3_73tjt")
+theme_override_font_sizes/font_size = 32
 text = "Jawaban"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Quiz"]
-offset_left = 295.0
-offset_top = 367.0
-offset_right = 387.0
-offset_bottom = 433.0
+offset_left = 220.0
+offset_top = 368.0
+offset_right = 407.0
+offset_bottom = 508.0
 scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 10
 
 [node name="Jawaban 1" type="Button" parent="Quiz/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_73tjt")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_myhem")
 text = "Jawaban 1
 "
@@ -79,19 +101,23 @@ text = "Jawaban 1
 [node name="Jawaban 2" type="Button" parent="Quiz/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_73tjt")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_hi8jm")
 text = "Jawaban  2"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Quiz"]
-offset_left = 821.0
-offset_top = 369.0
-offset_right = 913.0
-offset_bottom = 435.0
+offset_left = 775.0
+offset_top = 371.0
+offset_right = 954.0
+offset_bottom = 437.0
 scale = Vector2(1.5, 1.5)
 
 [node name="Jawaban 3" type="Button" parent="Quiz/VBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_73tjt")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_73tjt")
 text = "Jawaban 3"
 
@@ -102,7 +128,7 @@ offset_top = 77.0
 offset_right = 1246.0
 offset_bottom = 261.0
 scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 1
 theme_override_icons/icon = ExtResource("3_hi8jm")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ahi50")
 

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dco2y8ld5pfov"]
+
+[ext_resource type="Script" uid="uid://dnsejppw3niv8" path="res://Script/pause.gd" id="1_qvo2t"]
+[ext_resource type="Texture2D" uid="uid://bvelg6p4oqtnn" path="res://assests/Img/bg_pause.png" id="2_v0bxd"]
+
+[node name="Pause" type="Node2D"]
+script = ExtResource("1_qvo2t")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BgPause" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(657, 363)
+scale = Vector2(2.47802, 2.05777)
+texture = ExtResource("2_v0bxd")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 565.0
+offset_top = 170.0
+offset_right = 750.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 64
+text = "Pause"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 567.0
+offset_top = 350.0
+offset_right = 753.0
+offset_bottom = 504.0
+theme_override_constants/separation = 10
+
+[node name="Resume" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Resume"
+
+[node name="Exit" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Exit"
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]

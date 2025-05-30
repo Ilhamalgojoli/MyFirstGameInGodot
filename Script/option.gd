@@ -30,4 +30,4 @@ func _on_h_slider_sfx_value_changed(value: float) -> void:
 	)
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://Menu_scene/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://General_scene/MainMenu.tscn")

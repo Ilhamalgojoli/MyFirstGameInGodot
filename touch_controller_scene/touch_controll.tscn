@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xw7eyjn4v7b7"]
+[gd_scene load_steps=8 format=3 uid="uid://xw7eyjn4v7b7"]
 
 [ext_resource type="Script" uid="uid://b27ptxwfenico" path="res://Script/touch_controll.gd" id="1_e7hs4"]
 [ext_resource type="Texture2D" uid="uid://dmfphlyhu231y" path="res://assests/Img/jump_arrow.png" id="1_peml4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://jsab5mqgw0gv" path="res://assests/Img/right_arrow.png" id="3_hk1sr"]
 [ext_resource type="Texture2D" uid="uid://cdnl73v5n5yqy" path="res://assests/Img/Interect.png" id="4_e7hs4"]
 [ext_resource type="Texture2D" uid="uid://4ievt637gl0w" path="res://assests/Img/Group 51.png" id="6_y51v5"]
+[ext_resource type="Texture2D" uid="uid://c6ly8h3ehrf61" path="res://assests/Img/Pause.png" id="7_yegqp"]
 
 [node name="TouchControll" type="CanvasLayer"]
 scale = Vector2(0.9, 0.9)
@@ -45,5 +46,12 @@ texture_filter = 1
 position = Vector2(1146.67, 321.111)
 texture_normal = ExtResource("6_y51v5")
 
+[node name="Pause" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(1302.22, 34.4445)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_yegqp")
+
 [connection signal="pressed" from="Interect" to="." method="_on_interect_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
