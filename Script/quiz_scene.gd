@@ -10,23 +10,23 @@ extends Node2D
 var correct_index = 0
 var index = 0
 
-var questions_per_level = [
-	[ # Level 0
+var questions_per_level = {
+	"res://Game_scene/level_1.tscn": [
 		{ "text": ["Apa ibu kota Indonesia?", "Bandung", "Jakarta", "Surabaya", 1] },
 		{ "text": ["Siapa penemu lampu pijar?", "Albert Einstein", "Thomas Edison", "Isaac Newton", 1] },
 		{ "text": ["Berapakah hasil dari 12 x 3?", "36", "30", "42", 0] }
 	],
-	[ # Level 1
+	"res://Game_scene/level_2.tscn": [
 		{ "text": ["Planet terbesar di tata surya adalah?", "Bumi", "Jupiter", "Saturnus", 1] },
 		{ "text": ["Organ tubuh yang berfungsi memompa darah adalah?", "Hati", "Paru-paru", "Jantung", 2] },
 		{ "text": ["Siapa proklamator kemerdekaan Indonesia?", "Sukarno & Hatta", "Sukarno & Soedirman", "Hatta & Sjahrir", 0] }
 	],
-	[ # Level 2
+	"res://Game_scene/level_3.tscn": [
 		{ "text": ["Hewan pemakan daging disebut?", "Omnivora", "Herbivora", "Karnivora", 2] },
 		{ "text": ["Jika sebuah persegi memiliki keliling 36 cm, berapa panjang sisinya?", "6 cm", "9 cm", "12 cm", 1] },
 		{ "text": ["Doni membeli 3 buku seharga masing-masing Rp12.000 dan 2 pensil seharga Rp3.500. Berapa total uang yang harus dibayar Doni?", "Rp36.000", "Rp42.000", "Rp43.000", 2] }
 	]
-]
+}
 
 func _ready():
 	quiz_dialog.visible = false
@@ -38,7 +38,20 @@ func _on_show_dialog(show: bool) -> void:
 
 func show_question(index: int):
 	Controller.answer_quiz = false
-	var q_data = questions_per_level[Controller.level_index][index]
+
+	var current_path = get_tree().current_scene.scene_file_path
+	
+	if not questions_per_level.has(current_path):
+		print("Tidak ditemukan soal untuk level ini:", current_path)
+		return
+
+	var q_list = questions_per_level[current_path]
+
+	if index >= q_list.size():
+		Controller.show_text(true)
+		return
+
+	var q_data = q_list[index]
 	var q = q_data["text"]
 
 	question_label.text = q[0]

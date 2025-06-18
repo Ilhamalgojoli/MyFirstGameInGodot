@@ -26,5 +26,4 @@ func _on_area_2d_body_exited(body: Node) -> void:
 			hide_scroll()
 
 func hide_scroll():
-	await get_tree().create_timer(1.5).timeout
 	visible = false

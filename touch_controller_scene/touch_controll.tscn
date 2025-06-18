@@ -15,14 +15,14 @@ script = ExtResource("1_e7hs4")
 
 [node name="left" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(90, 534.444)
+position = Vector2(122.222, 534.444)
 scale = Vector2(4, 4)
 texture_normal = ExtResource("2_4ne23")
 action = "left"
 
 [node name="right" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(325.556, 534.444)
+position = Vector2(376.667, 534.444)
 scale = Vector2(4, 4)
 texture_normal = ExtResource("3_hk1sr")
 action = "right"

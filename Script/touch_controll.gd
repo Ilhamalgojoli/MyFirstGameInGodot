@@ -11,7 +11,7 @@ func _ready() -> void:
 	interect.visible = false
 	exit_button.visible = false
 	Controller.connect("interect", _on_interect_triggered)
-	
+
 func _on_interect_triggered(trigger: bool, is_exit: bool, is_controller: bool) -> void:
 	if is_exit:
 		if Controller.check_all_scroll_answered():

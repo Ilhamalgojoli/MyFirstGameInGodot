@@ -45,8 +45,9 @@ func replay_scene():
 	get_tree().change_scene_to_file(scene_path)
 
 func _handle_next_level():
+	var next_index = level_index + 1
 	if level_index < level_unlock.size():
-		level_unlock[level_index + 1] = true
+		level_unlock[level_index] = true
 
 func go_to_next_level():
 	level_index += 1

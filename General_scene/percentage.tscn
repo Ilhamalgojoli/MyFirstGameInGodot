@@ -72,17 +72,6 @@ offset_bottom = 257.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_g5gnl")
 theme_override_font_sizes/font_size = 54
-text = "Level 1-1"
-
-[node name="All_level_complete" type="Label" parent="CanvasLayer"]
-offset_left = 472.0
-offset_top = 547.0
-offset_right = 844.0
-offset_bottom = 590.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_g5gnl")
-theme_override_font_sizes/font_size = 42
-text = "Congrats Complete All Level"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_left = 466.0

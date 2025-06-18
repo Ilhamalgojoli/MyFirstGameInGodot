@@ -35,10 +35,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 46
 text = "Resume"
 
-[node name="Exit" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="Exit_pause" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 46
 text = "Exit"
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Exit_pause" to="." method="_on_exit_pause_pressed"]

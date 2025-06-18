@@ -3,12 +3,14 @@ extends Node2D
 @onready var complete_all_level = $All_level_complete
 @onready var result = $CanvasLayer/Result
 @onready var percentage = $CanvasLayer
+@onready var level = $CanvasLayer/Level
 
 func _ready() -> void:
 	percentage.visible = false
 	if Controller.show_all_complete:
 		complete_all_level.visible = true
 	Controller.connect("show_exit_dialog", _on_show)
+	level.text = "Level " + str(Controller.level_index + 1)
 
 func _on_show(show: bool):
 	if show:
